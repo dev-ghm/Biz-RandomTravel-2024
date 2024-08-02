@@ -1,0 +1,40 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.all {
+  margin: auto;
+  width: 90rem;
+  background-image: url("../image/cloud.jpg");
+  background-size: cover;
+}
+.h1 {
+}
+
+h1 {
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.btn-1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.btn-2 {
+  background-color: skyblue;
+  color: white;
+  border: none;
+  position: relative;
+  top: 650px;
+
+  padding: 10px 30px;
+  &:hover {
+    background-color: rgb(40, 177, 231);
+    cursor: pointer;
+  }
+}
