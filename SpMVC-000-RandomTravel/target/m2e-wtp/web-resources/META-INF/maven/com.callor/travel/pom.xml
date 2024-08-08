@@ -8,6 +8,7 @@
 	<name>SpMVC-000-RandomTravel</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
+	
 	<properties>
 		<java-version>15</java-version>
 		<org.springframework-version>5.2.25.RELEASE</org.springframework-version>
@@ -32,7 +33,6 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		
 
 		<!-- AspectJ -->
 		<dependency>

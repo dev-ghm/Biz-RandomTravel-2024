@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.callor.travel.persistance.TravelDao">
+
+
+	<insert id="travel_insert">
+		INSERT INTO travel(
+		t_name, t_introduction
+		) VALUES (
+		#{t_name},#{t_introduction}
+		)
+	</insert>
+	<update id="travel_update">
+		UPDATE travel
+		SET
+			t_introduction = #{t_introduction},
+		WHERE t_name = #{t_name}
+	</update>
+
+</mapper> 

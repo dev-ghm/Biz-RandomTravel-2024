@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.callor.memo.models.Memo;
 
+
+
 public interface MemoService {
 
 	public List<Memo> selectAll();

@@ -1,9 +1,6 @@
 package com.callor.travel.controller;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,33 +8,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.callor.travel.models.TravelVO;
+import com.callor.travel.service.TravelService;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Handles requests for the application home page.
  */
+@Slf4j
 @Controller
 public class HomeController {
 	
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
+	private final TravelService travelService;
+
+	public HomeController(TravelService tarvelService) {
+		
+		this.travelService = tarvelService;
+	}
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public String home(Model model) {
+		log.debug("Home");
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
+		List<TravelVO> travelList = travelService.selectAll();
+		model.addAttribute("TRAVEL", travelList);
 		return "home";
 	}
-
 	
-	@Query(value = "SELECT * FROM travel order by RAND() limit 1",nativeQuery = true)
-	List<TravelVO> findAll() {
-		return null;
-	}
 }
