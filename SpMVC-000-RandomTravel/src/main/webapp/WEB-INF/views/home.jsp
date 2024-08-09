@@ -8,8 +8,8 @@
     <title>Insert title here</title>
   <link rel="stylesheet" href="${rootPath}/static/css/main.css" />
   </head>
-  <body>	
-	<div class="all">
+  <body class="all">	
+	<div>
   
   		<div class="h1">
 		<h1>랜덤 여행</h1>

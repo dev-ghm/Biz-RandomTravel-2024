@@ -5,8 +5,9 @@
   padding: 0;
 }
 .all {
-  margin: auto;
-  width: 90rem;
+  margin-left: 20rem 20rem;
+  height: 50px;
+  width: 50px;
   background-image: url("../image/cloud.jpg");
   background-size: cover;
 }
