@@ -5,7 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<%@ include file="/WEB-INF/views/include/head.jspf"%>
+<%@ include file="/WEB-INF/views/include/head.jsp"%>
 <body>
 	<%@ include file="/WEB-INF/views/include/header.jsp"%>
 	<h1>관리자</h1>

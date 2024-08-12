@@ -5,17 +5,15 @@
   padding: 0;
 }
 .all {
-  margin-left: 20rem 20rem;
-  height: 50px;
-  width: 50px;
-  background-image: url("../image/cloud.jpg");
+  background: url("../image/cloud.jpg") no-repeat center fixed;
   background-size: cover;
-}
-.h1 {
+  height: 85vh;
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
 
-h1 {
-  color: white;
+.h1 {
+  color: black;
   padding: 30px;
   text-align: center;
 }
@@ -32,10 +30,40 @@ h1 {
   border: none;
   position: relative;
   top: 650px;
-
   padding: 10px 30px;
   &:hover {
     background-color: rgb(40, 177, 231);
     cursor: pointer;
+  }
+}
+
+header {
+  color: white;
+  padding: 2rem;
+
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+}
+
+nav.main {
+  color: white;
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      padding: 12px 16px;
+    }
+    li.home {
+      font: bold;
+    }
+    li.notice,
+    li.login {
+      margin-left: auto;
+    }
+    li:hover {
+      background-color: #aaa;
+      color: black;
+      cursor: pointer;
+    }
   }
 }
